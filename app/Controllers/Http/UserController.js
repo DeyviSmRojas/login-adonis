@@ -8,7 +8,7 @@ class UserController {
     async login({request, response, auth}){
         const {email,password}= request.only(['email','password'])
 
-        const token = await auth.attemp(email, password)
+        const token = await auth.attempt(email, password)
         return response.json(token)
     }
 //Creamos la funcion de registro con los campos designados y creados
